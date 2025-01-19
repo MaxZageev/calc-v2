@@ -10,9 +10,7 @@ function clearOutput() {
 }
 
 function updateOutput(value) {
-  const output = document.getElementById("output");
-
-  // Устанавливаем значение в output
+    // Устанавливаем значение в output
   output.textContent = value || "0";
 
   // Динамическое изменение размера шрифта
@@ -100,11 +98,6 @@ function appendOperator(operator) {
 
   currentInput += operator;
   updateOutput(currentInput);
-}
-
-function validateInput(input) {
-  // Удаляем все недопустимые повторяющиеся операторы (например, "++" или "--")
-  return input.replace(/[\+\-\*\/]{2,}/g, (match) => match.slice(-1));
 }
 
 function calculate() {
